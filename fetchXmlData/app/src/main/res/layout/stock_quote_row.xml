@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tLStockSymbol"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/activity_padding">
+
+    <TableRow
+        android:id="@+id/tROne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tVStockSymbol"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_span="2"
+        android:layout_weight="1"
+        android:fontFamily="casual"
+        android:textColor="@color/black"
+        android:textIsSelectable="true"
+        tools:text="@string/stock_symbol" />
+
+    <Button
+        android:id="@+id/btnQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:onClick="quoteStockSymbol"
+        android:text="@string/get_stock_quote"
+        style="?android:attr/buttonStyleSmall"
+        />
+
+    <Button
+        android:id="@+id/btnWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:onClick="webStockSymbol"
+        android:text="@string/go_to_website"
+        style="?android:attr/buttonStyleSmall"
+        />
+    </TableRow>
+
+</TableLayout>

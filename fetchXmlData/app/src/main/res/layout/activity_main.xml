@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tLOne"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/babyPowder"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.freelance.android.fetchXmlData.activities.MainActivity">
+
+    <TableRow
+        android:id="@+id/tROne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_padding">
+
+        <TextView
+            android:id="@+id/tVStockSymbol"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="@string/stock_symbol" />
+
+        <EditText
+            android:id="@+id/eTStockSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text">
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btnEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:onClick="enterStockSymbol"
+            android:text="@string/enter_stock_symbol" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tRTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cambridgeBlue">
+
+        <TextView
+            android:id="@+id/tVGetStockSymbolandQuotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:fontFamily="casual"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/activity_padding"
+            android:text="@string/stock_symbol_list"
+            android:textColor="@color/black"
+            android:textSize="@dimen/stock_list_text_size" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tRThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/cambridgeBlue">
+
+        <ScrollView
+            android:id="@+id/sVStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:padding="@dimen/stock_list_text_size">
+
+            <TableLayout
+                android:id="@+id/tLStockScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/stock_list_text_size"
+                android:stretchColumns="yes">
+
+            </TableLayout>
+
+        </ScrollView>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tRFour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:onClick="deleteAllStockSymbols"
+            android:text="@string/delete_all_symbols" />
+    </TableRow>
+</TableLayout>
+
+    <!--<TextView
+          android:id="@+id/tVOne"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          tools:text="line 1"
+          android:fontFamily="casual"
+          style="@android:style/TextAppearance.Medium"/>
+
+      <TextView
+          android:id="@+id/tVTwo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          tools:text="line 2"
+          android:fontFamily="casual"
+          style="@android:style/TextAppearance.Medium"
+          />
+
+      <TextView
+          android:id="@+id/tVThree"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          tools:text="line 3"
+          android:fontFamily="casual"
+          style="@android:style/TextAppearance.Medium"/>-->
